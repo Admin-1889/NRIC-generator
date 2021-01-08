@@ -1,5 +1,7 @@
 # NRIC-generator
-# This is used for generating NRIC to proceed in scambaiting
+# This is used for generating NRIC to proceed in scambaiting (refer to: 
+
+NOTE: This generator can only be used to generate Singapore IC before year 2000 (IC starting with T)
 
 Variants:
 

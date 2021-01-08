@@ -6,11 +6,11 @@ NOTE: This generator can only be used to generate Singapore IC before year 2000 
 
 # Variants:
 
-*gen_withimg.py*
+# *gen_withimg.py*
 Developed with a friend, this is a complete NRIC generator.
 Download of relavent documments required.
 Link:
 
-*gen_withoutimg.py*
+# *gen_withoutimg.py*
 Modified from original script, this is only the BC number. 
 No download required. Code can be excecuted from an online/desktop IDE

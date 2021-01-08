@@ -1,58 +1,58 @@
 import cv2
 import numpy as np
-from PIL import ImageFont,ImageDraw,Image,ImageEnhance
+from PIL import ImageFont, ImageDraw, Image, ImageEnhance
 import random
 
 alias = input("Input your fake name (not more than 20 chars): ").upper()
 x = alias.split("\n")
 alias = ""
 for i in x :
-  alias+ = i
-  alias+ = "\n"
+  alias += i
+  alias += "\n"
 race = input("Input your race: ").upper()
 DOB = input("Input your DOB: ").upper()
-d,m,y = DOB.split("-")
+d, m, y = DOB.split("-")
 Gender = input("Input your gender: ").upper()
 address = input("Input your address: ")
 no = "S"
-no+=y[2:4]
+no += y[2:4]
 temp = str(random.randint(0,99999))
-no+=temp.zfill(5)
-temp=no[1:]
-checksum=(int(temp[0])*2+int(temp[1])*7+int(temp[2])*6+int(temp[3])*5+int(temp[4])*4+int(temp[5])*3+int(temp[6])*2)%11
+no += temp.zfill(5)
+temp = no[1:]
+checksum = (int(temp[0])*2+int(temp[1])*7+int(temp[2])*6+int(temp[3])*5+int(temp[4])*4+int(temp[5])*3+int(temp[6])*2)%11
 if checksum == 0:
-  no+="J"
+  no += "J"
 elif checksum == 1:
-  no+="Z"
+  no += "Z"
 elif checksum == 2:
-  no+="I"
+  no += "I"
 elif checksum == 3:
-  no+="H"
+  no += "H"
 elif checksum == 4:
-  no+="G"
+  no += "G"
 elif checksum == 5:
-  no+="F"
+  no += "F"
 elif checksum == 6:
-  no+="E"
+  no += "E"
 elif checksum == 7:
-  no+="D"
+  no += "D"
 elif checksum==8:
-  no+="C"
+  no += "C"
 elif checksum == 9:
-  no+="B"
+  no += "B"
 else:
-  no+="A"
+  no += "A"
 print(no)
-x=address.split(",,")
-address=""
-for i in x:
-  address+=i
-  address+="\n"
-blood=random.choice(["A","B","AB","O"])+random.choice(["+","-"])
-if 1970>int(y):
-  doi=str(random.randint(1,28))+"-"+str(random.randint(1,12))+"-"+str(random.randint(1970,2001))
+x = address.split(",,")
+address = ""
+for i in x :
+  address += i
+  address += "\n"
+blood = random.choice(["A","B","AB","O"])+random.choice(["+","-"])
+if 1970 > int(y):
+  doi = str(random.randint(1,28))+"-"+str(random.randint(1,12))+"-"+str(random.randint(1970,2001))
 else:
-  doi=str(random.randint(1,28))+"-"+str(random.randint(1,12))+"-"+str(random.randint(int(y)+1,2001))
+  doi = str(random.randint(1,28))+"-"+str(random.randint(1,12))+"-"+str(random.randint(int(y)+1,2001))
 
 #doi,blood,address,alias,race,DOB,Gender,no="11-1-1","A+","test","asdf","","","F","T1234567A"
 img=cv2.imread("IC_Front.png")

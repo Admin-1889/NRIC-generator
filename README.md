@@ -8,6 +8,7 @@ NOTE: This generator can only be used to generate Singapore IC before year 2000 
 
 # *gen_withimg.py*
 Developed with a friend, this is a complete NRIC generator.
+opencv and python are required to be installed 
 Download of relavent documments required.
 Link: https://drive.google.com/drive/folders/1nzdz0m1gCa_hP60cM3mrv7Hy3wDrF5t3?usp=sharing
 

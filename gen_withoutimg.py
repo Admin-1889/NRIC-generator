@@ -1,5 +1,9 @@
 import random
 
+print("Welcome to NRIC Gen without imgage")
+print()
+print("Input DOB (eg 12-12-1998)")
+
 DOB = input("input: ").upper()
 d,m,y = DOB.split("-")
 no = "S"
